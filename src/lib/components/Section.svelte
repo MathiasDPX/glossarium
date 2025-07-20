@@ -1,8 +1,8 @@
-<script>
-export let id;
-export let title;
-export let bgClass = '';
-export let containerClass = 'max-w-4xl mx-auto';
+<script lang="ts">
+export let id :string;
+export let title :string;
+export let bgClass :string = '';
+export let containerClass :string = 'max-w-4xl mx-auto';
 </script>
 
 <section {id} class="py-20 px-6 {bgClass}">

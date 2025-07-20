@@ -1,6 +1,6 @@
-<script>
-export let href;
-export let target = '_blank';
+<script lang="ts">
+export let href :string;
+export let target :string = '_blank';
 
 $: buttonClasses = 'bg-yellow-900 text-white hover:bg-yellow-800';
 </script>

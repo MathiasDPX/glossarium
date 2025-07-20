@@ -1,5 +1,5 @@
-<script>
-export let items = [];
+<script lang="ts">
+export let items: { id: string; label: string }[] = [];
 </script>
 
 <ul class="flex space-x-4 text-sm text-yellow-900">

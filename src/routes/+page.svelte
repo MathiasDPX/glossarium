@@ -23,24 +23,66 @@ const ideas = [
 
 const prizes = [
     {
-        href: 'https://store.wizardzines.com/products/how-git-works',
-        src: 'https://store.wizardzines.com/cdn/shop/files/HowGitWorksColor-RGB-Web_1024x1024@2x.jpg?v=1716911764',
+        href: 'https://wizardzines.com/zines/terminal',
+        alt: 'The Secrets Rules of the Terminal'
+    },
+    {
+        href: 'https://wizardzines.com/zines/bite-size-command-line',
+        alt: 'Bite Size Command Line!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/bite-size-linux',
+        alt: 'Bite Size Linux!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/bite-size-bash',
+        alt: 'Bite Size Bash!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/bite-size-networking',
+        alt: 'Bite Size Networking!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/git',
         alt: 'How Git Works'
     },
     {
-        href: 'https://store.wizardzines.com/products/how-integers-and-floats-work',
-        src: 'https://store.wizardzines.com/cdn/shop/files/HowIntegersAndFloatsWorkCMYK300dpi_1024x1024@2x.jpg?v=1686929974',
-        alt: 'How Integers And Floats Work'
+        href: 'https://wizardzines.com/zines/integers-floats',
+        src: 'https://wizardzines.com/zines/integers-floats/cover.png',
+        alt: 'How Integers and Floats Work'
     },
     {
-        href: 'https://store.wizardzines.com/products/the-pocket-guide-to-debugging',
-        src: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1672175555i/75355942.jpg',
+        href: 'https://wizardzines.com/zines/debugging-guide',
         alt: 'The Pocket Guide to Debugging'
     },
     {
-        href: 'https://store.wizardzines.com/products/how-dns-works',
-        src: 'https://jvns.ca/images/dns-cover.png',
+        href: 'https://wizardzines.com/zines/dns',
         alt: 'How DNS Works'
+    },
+    {
+        href: 'https://wizardzines.com/zines/css',
+        src: 'https://wizardzines.com/zines/css/cover.png',
+        alt: 'Hell Yes! CSS!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/containers',
+        alt: 'How Containers Work!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/sql',
+        alt: 'Become a SELECT star!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/http',
+        alt: 'HTTP: Learn your browser\'s language!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/oh-shit-git',
+        alt: 'Oh shit, git!'
+    },
+    {
+        href: 'https://wizardzines.com/zines/manager',
+        alt: 'Help! I have a manager!'
     }
 ];
 </script>

@@ -124,7 +124,7 @@ const prizes = [
 <Section id="prizes" title="What you will get" containerClass="mx-auto">
     <div class="overflow-x-auto whitespace-nowrap">
         {#each prizes as prize}
-        <PrizeCard href={prize.href} src={prize.src} alt={prize.alt} />
+        <PrizeCard href={prize.href} src={prize.src ?? ''} alt={prize.alt} />
         {/each}
     </div>
     <p class="mt-6 text-gray-700 italic">You will get all of them!</p>

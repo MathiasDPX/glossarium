@@ -193,7 +193,7 @@ onMount(() => {
 
     <h2 class="text-3xl font-semibold text-yellow-900 mb-6">Ready to share?</h2>
     <p class="text-lg mb-4 text-gray-800">Submit your tutorial and get your zine.</p>
-    <Button href="https://forms.hackclub.com/home">RSVP Now</Button>
+    <Button href="https://tally.so/r/mKr2Jk">RSVP Now</Button>
 </section>
 
 <!-- Footer -->

@@ -186,7 +186,7 @@ onMount(() => {
         <li>Track more than 2 hours with <a class="text-yellow-800 underline" href="https://hackatime.hackclub.com/">Hackatime</a></li>
         <li title="Two Hackclubbers can't do a tutorial on the same subject.">Be original within the ysws</li>
         <li title="Spellcheck/translation allowed">No AI should be used to generate content</li>
-        <li>Tutorial must be publicly accessible for everyone</li>
+        <li>Tutorial must be publicly accessible for everyone forever</li>
         <li>Credit any sources you used</li>
         <li>Be 18 or younger</li>
     </ul>

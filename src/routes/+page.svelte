@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
 import Navigation from '$lib/components/Navigation.svelte';
 import Section from '$lib/components/Section.svelte';
 import IdeaItem from '$lib/components/IdeaItem.svelte';
 import PrizeCard from '$lib/components/PrizeCard.svelte';
 import Button from '$lib/components/Button.svelte';
+
+import { onMount } from 'svelte';
 
 const navItems = [
     { id: 'about', label: 'About' },
@@ -85,6 +87,43 @@ const prizes = [
         alt: 'Help! I have a manager!'
     }
 ];
+
+let scrollContainer :Element;
+let isHovered = false;
+
+onMount(() => {
+    let scrollAmount = 0;
+    const step = 1;
+    const delay = 6;
+
+    const scroll = () => {
+        if (scrollContainer && !isHovered) {
+            scrollAmount += step;
+            if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+                scrollAmount = 0;
+            }
+            scrollContainer.scrollLeft = scrollAmount;
+        }
+    };
+
+    const interval = setInterval(scroll, delay);
+
+    const handleMouseEnter = () => { isHovered = true; };
+    const handleMouseLeave = () => { isHovered = false; };
+
+    if (scrollContainer) {
+        scrollContainer.addEventListener('mouseenter', handleMouseEnter);
+        scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+    return () => {
+        clearInterval(interval);
+        if (scrollContainer) {
+            scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
+            scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
+        }
+    };
+});
 </script>
 
 <!-- Navbar -->
@@ -106,7 +145,7 @@ const prizes = [
     <h2 class="text-4xl font-semibold text-yellow-900 mb-6">What is Glossarium?</h2>
     <p class="text-lg mb-4 leading-relaxed text-gray-700">
         <strong>Glossarium</strong> is a celebration of shared knowledge. You write a tutorial — a how-to, an explainer, a personal guide —
-        and we'll reward your wisdom with access to every zines by <a href="https://wizardzines.com" target="_blank" class="text-yellow-800 underline">Julia Evans</a>.
+        and we'll reward your wisdom with a zine by <a href="https://wizardzines.com" target="_blank" class="text-yellow-800 underline">Julia Evans</a>.
     </p>
     <span class="text-lg italic text-yellow-900">Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.</span><span class="text-lg text-yellow-900"> - Kofi Annan</span>
 </section>
@@ -122,18 +161,28 @@ const prizes = [
 
 <!-- Prizes Section -->
 <Section id="prizes" title="What you will get" containerClass="mx-auto">
-    <div class="overflow-x-auto whitespace-nowrap">
+    <div bind:this={scrollContainer} class="overflow-x-auto whitespace-nowrap scrollbar-hide">
         {#each prizes as prize}
         <PrizeCard href={prize.href} src={prize.src ?? ''} alt={prize.alt} />
         {/each}
     </div>
-    <p class="mt-6 text-gray-700 italic">You will get all of them! <i>(depend on the ysws scale)</i></p>
+    <!--<p class="mt-6 text-gray-700 italic">You will get all of them! <i>(depend on the ysws scale)</i></p>-->
 </Section>
+
+<style>
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+</style>
 
 <!-- RSVP Section -->
 <section id="rsvp" class="bg-[#f3ede0] py-20 px-6 text-center">
     <h2 class="text-3xl font-semibold text-yellow-900 mb-6">Ready to share?</h2>
-    <p class="text-lg mb-4 text-gray-800">Submit your tutorial and get access to all zines.<br><i><small>You need to be 18 or younger.</small></i></p>
+    <p class="text-lg mb-4 text-gray-800">Submit your tutorial and get your zine.<br><i><small>You need to be 18 or younger.</small></i></p>
     <Button href="https://forms.hackclub.com/home">RSVP Now</Button>
 </section>
 

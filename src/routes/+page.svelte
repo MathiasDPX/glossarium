@@ -127,7 +127,7 @@ const prizes = [
         <PrizeCard href={prize.href} src={prize.src ?? ''} alt={prize.alt} />
         {/each}
     </div>
-    <p class="mt-6 text-gray-700 italic">You will get all of them!</p>
+    <p class="mt-6 text-gray-700 italic">You will get all of them! <i>(depend on the ysws scale)</i></p>
 </Section>
 
 <!-- RSVP Section -->

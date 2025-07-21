@@ -180,9 +180,19 @@ onMount(() => {
 </style>
 
 <!-- RSVP Section -->
-<section id="rsvp" class="bg-[#f3ede0] py-20 px-6 text-center">
+<section id="rsvp" class="bg-[#f3ede0] py-20 px-6 text-center pt-14 pb-14">
+    <h3 class="text-2xl font-semibold text-yellow-900">Here's the rules you must follow </h3>
+    <ul class="list-disc text-left inline-block mx-auto mt-4 pb-8">
+        <li>Track more than 2 hours with <a class="text-yellow-800 underline" href="https://hackatime.hackclub.com/">Hackatime</a></li>
+        <li title="Two Hackclubbers can't do a tutorial on the same subject.">Be original within the ysws</li>
+        <li title="Spellcheck/translation allowed">No AI should be used to generate content</li>
+        <li>Tutorial must be publicly accessible for everyone</li>
+        <li>Credit any sources you used</li>
+        <li>Be 18 or younger</li>
+    </ul>
+
     <h2 class="text-3xl font-semibold text-yellow-900 mb-6">Ready to share?</h2>
-    <p class="text-lg mb-4 text-gray-800">Submit your tutorial and get your zine.<br><i><small>You need to be 18 or younger.</small></i></p>
+    <p class="text-lg mb-4 text-gray-800">Submit your tutorial and get your zine.</p>
     <Button href="https://forms.hackclub.com/home">RSVP Now</Button>
 </section>
 
